@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  house_number: MyString
+  street_name: MyString
+  suburb: MyString
+  dustbin_id: MyString
+  dustbin_size: MyString
+  payment_code: MyString
+  collection_type: MyString
+
+two:
+  name: MyString
+  house_number: MyString
+  street_name: MyString
+  suburb: MyString
+  dustbin_id: MyString
+  dustbin_size: MyString
+  payment_code: MyString
+  collection_type: MyString

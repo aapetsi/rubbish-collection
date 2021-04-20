@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Data</h1>
+
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>Name</th>
+      <th>House number</th>
+      <th>Street name</th>
+      <th>Suburb</th>
+      <th>Dustbin ID</th>
+      <th>Dustbin size</th>
+      <th>Payment code</th>
+      <th>Collection type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.house_number %></td>
+        <td><%= user.street_name %></td>
+        <td><%= user.suburb %></td>
+        <td><%= user.dustbin_id %></td>
+        <td><%= user.dustbin_size %></td>
+        <td><%= user.payment_code %></td>
+        <td><%= user.collection_type %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Add New Entry', new_user_path %>

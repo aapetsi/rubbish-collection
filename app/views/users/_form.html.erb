@@ -1,0 +1,57 @@
+<%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :house_number %>
+    <%= form.text_field :house_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :street_name %>
+    <%= form.text_field :street_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :suburb %>
+    <%= form.text_field :suburb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dustbin_id %>
+    <%= form.text_field :dustbin_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dustbin_size %>
+    <%= form.select :dustbin_size, ["Small", "Medium", "Large"] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :payment_code %>
+    <%= form.text_field :payment_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :collection_type %>
+    <%= form.select :collection_type, ["Daily", "Weekly", "Monthly"] %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>House number:</strong>
+  <%= @user.house_number %>
+</p>
+
+<p>
+  <strong>Street name:</strong>
+  <%= @user.street_name %>
+</p>
+
+<p>
+  <strong>Suburb:</strong>
+  <%= @user.suburb %>
+</p>
+
+<p>
+  <strong>Dustbin ID:</strong>
+  <%= @user.dustbin_id %>
+</p>
+
+<p>
+  <strong>Dustbin size:</strong>
+  <%= @user.dustbin_size %>
+</p>
+
+<p>
+  <strong>Payment code:</strong>
+  <%= @user.payment_code %>
+</p>
+
+<p>
+  <strong>Collection type:</strong>
+  <%= @user.collection_type %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
